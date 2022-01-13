@@ -36,7 +36,6 @@ while True:
         code2 = input('Digite o código do produto: ')
         while code2 not in codigo:
             code2 = input('Digite o código do produto: ')
-        qnt = int(input('Digite a quantidade: '))
         pos = codigo.index(code2)
         pdt2 += (produto[pos], )
         valor2 += (preço[pos], )
@@ -53,7 +52,7 @@ while True:
         total += preço2
     for cont in range(0, len(pdt2)):
         print(f'{pdt2[cont]:.<20}', end=' ')
-        print(f'R${valor2[cont] * qnt:>.2f}')
+        print(f'R${valor2[cont]:>.2f}')
     print(f'\nTOTAL: R${total:.2f}')
     print('-'*35)
     dinheiro = float(input('Digite o dinheiro recebido: R$'))
